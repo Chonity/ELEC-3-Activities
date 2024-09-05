@@ -1,0 +1,119 @@
+/* Basic styles for the body, with a background image */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('Pics/itachi.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Styles for the navigation bar */
+nav {
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling for the list inside the navigation */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Spread out the list items */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Matching background color */
+    width: 100%;
+}
+
+/* Basic list item styling */
+nav ul li {
+    position: relative;
+}
+
+/* Link styles for navigation items */
+nav a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Hover effect for links */
+nav a:hover {
+    background-color: #7c00da; 
+}
+
+/* Dropdown menu styling (hidden by default) */
+.dropdown-menu {
+    display: none; /* Hidden until hover */
+    position: absolute;
+    top: 100%; /* Positioned just below the parent item */
+    left: 0;
+    background-color: #000;
+    padding: 0px;
+    z-index: 1; /* Keeps it on top of other elements */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Visible on hover */
+}
+
+/* Styling individual dropdown items */
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+/* Remove bottom margin for the last item */
+.dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+/* Adjust icon margin and size in the navigation links */
+nav a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Responsive design for screens 800px or smaller */
+@media (max-width: 800px) {
+    nav ul {
+        flex-direction: row; /* Keep horizontal layout */
+        justify-content: space-between;
+    }
+    nav ul li {
+        width: auto;
+    }
+    nav a {
+        padding: 10px 10px; /* Adjust padding */
+        font-size: 20px; 
+    }
+    .dropdown-menu {
+        width: auto;
+    }
+}
+
+/* Further adjustments for screens 480px or smaller */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav ul li {
+        width: auto;
+    }
+    nav a {
+        padding: 5px 10px; 
+        font-size: 18px; 
+    }
+    .dropdown-menu {
+        width: auto;
+    }
+}
